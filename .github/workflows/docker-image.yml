@@ -15,7 +15,7 @@ jobs:
     steps:
          - uses: actions/checkout@v3
          - name: "docker login"
-           run: login u="ashisparida" p="7381284169"
+           run: docker login u="ashisparida" p="7381284169"
          - name: Build the Docker image
            run: docker build . --file Dockerfile --tag ashisparida/todaytask:$tommy-123
          - name: docker push
